@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  nestjs-app:
+    container_name: nestjs-app
+    build: .
+    ports:
+      - '3000:3000' # Puerto en el que se ejecutará el servidor NestJS
+    environment:
+      POSTGRES_HOST: db # Hostname del servicio de base de datos PostgreSQL
+      POSTGRES_PORT: 5432 # Puerto en el que se ejecuta PostgreSQL
+      POSTGRES_USER: username # Usuario de PostgreSQL
+      POSTGRES_PASSWORD: password # Contraseña de PostgreSQL
+      POSTGRES_DB: dbname # Nombre de la base de datos PostgreSQL
+    depends_on:
+      - db
+    command: sh -c "npm run seed && npm run start:dev" # Comando para ejecutar el script de semilla y luego iniciar el servidor NestJS
+
+  db:
+    container_name: postgres-db
+    image: postgres:latest
+    restart: always
+    ports:
+      - '5432:5432' # Puerto en el que se ejecutará PostgreSQL
+    environment:
+      POSTGRES_USER: username # Usuario de PostgreSQL
+      POSTGRES_PASSWORD: password # Contraseña de PostgreSQL
+      POSTGRES_DB: dbname # Nombre de la base de datos PostgreSQL

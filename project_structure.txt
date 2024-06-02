@@ -1,0 +1,31 @@
+sprocket-factory/
+├── src/
+│   ├── factories/
+│   │   ├── dto/
+│   │   │   ├── create-factory.dto.ts
+│   │   ├── entities/
+│   │   │   ├── factory.entity.ts
+│   │   ├── factories.controller.ts
+│   │   ├── factories.module.ts
+│   │   ├── factories.service.ts
+│   ├── sprockets/
+│   │   ├── dto/
+│   │   │   ├── create-sprocket.dto.ts
+│   │   ├── entities/
+│   │   │   ├── sprocket.entity.ts
+│   │   ├── sprockets.controller.ts
+│   │   ├── sprockets.module.ts
+│   │   ├── sprockets.service.ts
+│   ├── seeds/
+│   │   ├── seed.ts
+│   │   ├── seed_factory_data.json
+│   │   ├── seed_sprocket_types.json
+│   ├── app.module.ts
+│   ├── main.ts
+├── .env
+├── .env.example
+├── .gitignore
+├── docker-compose.yml
+├── package.json
+├── README.md
+├── tsconfig.json
