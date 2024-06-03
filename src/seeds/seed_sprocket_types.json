@@ -1,25 +1,22 @@
 {
     "sprockets": [
       {
-        "teeth": 5,
-        "pitch_diameter": 5,
-        "outside_diameter": 6,
-        "pitch": 1,
-        "factoryId":1
+        "teeth": 15,
+        "pitch_diameter": 15,
+        "outside_diameter": 16,
+        "pitch": 11       
       },
       {
-        "teeth": 5,
-        "pitch_diameter": 5,
-        "outside_diameter": 6,
-        "pitch": 1,
-        "factoryId":2
+        "teeth": 25,
+        "pitch_diameter": 25,
+        "outside_diameter": 26,
+        "pitch": 21
       },
       {
-        "teeth": 5,
-        "pitch_diameter": 5,
-        "outside_diameter": 6,
-        "pitch": 1,
-        "factoryId":3
+        "teeth": 35,
+        "pitch_diameter": 35,
+        "outside_diameter": 36,
+        "pitch": 31
       }
     ]
   }

@@ -1,4 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { Sprocket } from '../../sprockets/entities/sprocket.entity';
 import { FactoryProduction } from './factory-production.entity';
 
@@ -9,11 +16,11 @@ export class Factory {
 
   @Column()
   name: string;
-  
-  @OneToMany(() => Sprocket, sprocket => sprocket.factory)
+
+  @OneToMany(() => Sprocket, (sprocket) => sprocket.factory)
   sprockets: Sprocket[];
 
-  @OneToMany(() => FactoryProduction, production => production.factory)
+  @OneToMany(() => FactoryProduction, (production) => production.factory)
   productions: FactoryProduction[];
 
   @CreateDateColumn()

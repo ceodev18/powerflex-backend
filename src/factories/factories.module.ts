@@ -6,8 +6,8 @@ import { Factory } from './entities/factory.entity';
 import { FactoryProduction } from './entities/factory-production.entity';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([Factory, FactoryProduction])],
+  imports: [TypeOrmModule.forFeature([Factory, FactoryProduction])],
   providers: [FactoriesService],
-  controllers: [FactoriesController]
+  controllers: [FactoriesController],
 })
 export class FactoriesModule {}

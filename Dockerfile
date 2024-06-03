@@ -1,20 +1,20 @@
-# Usa una imagen base de Node.js con la versión 20.14.0
+# Use a base image of Node.js with version 20.14.0
 FROM node:20.14.0
 
-# Establece el directorio de trabajo en /app
+# Set the working directory to /app
 WORKDIR /app
 
-# Copia el archivo package.json y yarn.lock (si existe)
+# Copy the package.json and yarn.lock files (if they exist)
 COPY package.json yarn.lock ./
 
-# Instala las dependencias del proyecto
+# Install the project dependencies
 RUN yarn install
 
-# Copia el resto de los archivos del proyecto
+# Copy the rest of the project files
 COPY . .
 
-# Expone el puerto en el que se ejecutará la aplicación NestJS
+# Expose the port on which the NestJS application will run
 EXPOSE 3000
 
-# Comando para ejecutar la aplicación
+# Command to run the application
 CMD ["yarn", "start:prod"]

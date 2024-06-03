@@ -1,5 +1,3 @@
 export class CreateFactoryDto {
-    readonly name: string;
-    readonly location: string    
-  }
-  
+  readonly name: string;
+}

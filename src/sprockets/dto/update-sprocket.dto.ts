@@ -1,6 +1,23 @@
+import { IsInt, Min, IsNotEmpty } from 'class-validator';
+
 export class UpdateSprocketDto {
-    teeth?: number; // Número de dientes del sprocket
-    pitch_diameter?: number; // Diámetro de paso del sprocket
-    outside_diameter?: number; // Diámetro exterior del sprocket
-    pitch?: number; // Paso del sprocket
-  }
+  @IsInt()
+  @Min(1)
+  @IsNotEmpty()
+  teeth?: number;
+
+  @IsInt()
+  @Min(1)
+  @IsNotEmpty()
+  pitch_diameter?: number;
+
+  @IsInt()
+  @Min(1)
+  @IsNotEmpty()
+  outside_diameter?: number;
+
+  @IsInt()
+  @Min(1)
+  @IsNotEmpty()
+  pitch?: number;
+}

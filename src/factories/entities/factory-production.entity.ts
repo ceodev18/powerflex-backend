@@ -1,6 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { Factory } from './factory.entity';
-import { Sprocket } from 'src/sprockets/entities/sprocket.entity';
+import { Sprocket } from '../../sprockets/entities/sprocket.entity';
 
 @Entity()
 export class FactoryProduction {
@@ -10,10 +17,10 @@ export class FactoryProduction {
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   time: Date;
 
-  @ManyToOne(() => Factory, factory => factory.productions)
+  @ManyToOne(() => Factory, (factory) => factory.productions)
   factory: Factory;
 
-  @ManyToOne(() => Sprocket, sprocket => sprocket.productions)
+  @ManyToOne(() => Sprocket, (sprocket) => sprocket.productions)
   sprocket: Sprocket;
 
   @Column()
