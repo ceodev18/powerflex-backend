@@ -24,7 +24,8 @@ export class FactoriesService {
   }
 
   async create(createFactoryDto: CreateFactoryDto): Promise<Factory> {
-    const factory = this.factoryRepository.create(createFactoryDto);
+    const factory = new Factory();
+    factory.name = createFactoryDto.name;
     return this.factoryRepository.save(factory);
   }
 }

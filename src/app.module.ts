@@ -5,6 +5,7 @@ import { FactoriesModule } from './factories/factories.module';
 import { SprocketsModule } from './sprockets/sprockets.module';
 import { Factory } from './factories/entities/factory.entity';
 import { Sprocket } from './sprockets/entities/sprocket.entity';
+import { FactoryProduction } from './factories/entities/factory-production.entity';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { Sprocket } from './sprockets/entities/sprocket.entity';
       ssl:{
         rejectUnauthorized: false,
       },
-      entities: [Factory, Sprocket],
+      entities: [Factory, Sprocket, FactoryProduction],
       synchronize: true,
     }),
     FactoriesModule,

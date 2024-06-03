@@ -14,7 +14,7 @@ services:
       POSTGRES_DB: dbname # Nombre de la base de datos PostgreSQL
     depends_on:
       - db
-    command: sh -c "npm run seed && npm run start:dev" # Comando para ejecutar el script de semilla y luego iniciar el servidor NestJS
+    #command: sh -c "npm run seed && npm run start:dev" # Comando para ejecutar el script de semilla y luego iniciar el servidor NestJS
 
   db:
     container_name: postgres-db

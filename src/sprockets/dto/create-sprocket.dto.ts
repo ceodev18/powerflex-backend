@@ -20,4 +20,9 @@ export class CreateSprocketDto {
   @Min(1)
   @IsNotEmpty()
   pitch: number;
+
+  @IsInt()
+  @Min(1)
+  @IsNotEmpty()
+  factoryId: number;
 }

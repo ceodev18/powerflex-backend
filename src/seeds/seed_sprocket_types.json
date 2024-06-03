@@ -4,19 +4,22 @@
         "teeth": 5,
         "pitch_diameter": 5,
         "outside_diameter": 6,
-        "pitch": 1
+        "pitch": 1,
+        "factoryId":1
       },
       {
         "teeth": 5,
         "pitch_diameter": 5,
         "outside_diameter": 6,
-        "pitch": 1
+        "pitch": 1,
+        "factoryId":2
       },
       {
         "teeth": 5,
         "pitch_diameter": 5,
         "outside_diameter": 6,
-        "pitch": 1
+        "pitch": 1,
+        "factoryId":3
       }
     ]
   }
