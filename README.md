@@ -11,6 +11,9 @@ RESTful api that services requests for sprocket factory data and sprockets
 ## Installation
 1. Clone the repository.
 2. Install dependencies using `yarn install`.
+3. Execute `cp .env.example .env` and uncomment the db setup needed (docker or local)
+4. Database is deployed but docker-compose but also i'm attaching credentials for external cloud database for testing purpose.
+
 
 ## Usage
 - To run the application locally, use `yarn start:dev`.

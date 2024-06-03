@@ -21,7 +21,7 @@ services:
     image: postgres:latest
     restart: always
     ports:
-      - '5432:5432' # Port on which PostgreSQL will run
+      - '5433:5432' # Port on which PostgreSQL will run
     environment:
       POSTGRES_USER: username # PostgreSQL user
       POSTGRES_PASSWORD: password # PostgreSQL password
